@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TelaCadastro">
+
+<de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/fotoUsuario"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:src="@color/black"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp" />
+
+  <Button
+      android:id="@+id/bt_selecionarFoto"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Selecione sua foto"
+      android:textSize="15sp"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      android:backgroundTint="@android:color/transparent"
+      android:layout_marginTop="10dp"
+      android:layout_gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:hint="Informe o seu Nome"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/teal_200"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:hint="Informe o seu E-mail"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/teal_200"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editEmail"
+            android:inputType="textEmailAddress"
+            android:drawableRight="@drawable/ic_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:hint="Informe a sua Senha"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/teal_200"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editSenha"
+            android:drawableRight="@drawable/ic_eye"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txt_mensagemErroTelaCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text=""
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btCadastrarTelaCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:enabled="false"
+        android:background="@drawable/rounded_corner"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/senai_logo"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp" />
+
+
+</LinearLayout>
