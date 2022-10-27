@@ -65,6 +65,15 @@ public class TelaLogin extends AppCompatActivity {
                             IniciarTelaProdutos();
                         }
                     },3000);
+                }else{
+                    String erro;
+
+                    try {
+                        throw task.getException();
+                    }catch (Exception e){
+                        erro = "Erro ao logar usuário!";
+                    }
+                    txt_mensagemErro.setText(erro);
                 }
             }
         });

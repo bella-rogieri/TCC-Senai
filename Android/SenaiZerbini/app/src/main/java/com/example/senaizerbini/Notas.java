@@ -44,12 +44,13 @@ public class Notas {
 
     static CollectionReference getCollectionReferenceforNotes(){
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-        return FirebaseFirestore.getInstance().collection("Notas").document(currentUser.getUid()).collection("Minhas notas");
+        return FirebaseFirestore.getInstance().collection("Notas");
     }
 
     static String timestampp(Timestamp timestamp) {
        return new SimpleDateFormat("dd/MM/yyyy").format(timestamp.toDate());
     }
+
 }
 
 

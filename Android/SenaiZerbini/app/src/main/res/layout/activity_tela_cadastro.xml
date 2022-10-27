@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,11 +16,11 @@
 
 <de.hdodenhof.circleimageview.CircleImageView
     android:id="@+id/fotoUsuario"
-    android:layout_width="200dp"
-    android:layout_height="200dp"
+    android:layout_width="170dp"
+    android:layout_height="170dp"
     android:src="@color/black"
     android:layout_gravity="center"
-    android:layout_marginTop="10dp" />
+    android:layout_marginTop="5dp" />
 
   <Button
       android:id="@+id/bt_selecionarFoto"
@@ -31,10 +37,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:hint="Informe o seu Nome"
+        android:hint="Nome:"
         app:hintTextColor="@color/black"
         app:boxStrokeColor="@color/teal_200"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -52,7 +58,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:hint="Informe o seu E-mail"
+        android:hint="E-mail:"
         app:hintTextColor="@color/black"
         app:boxStrokeColor="@color/teal_200"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -72,7 +78,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:hint="Informe a sua Senha"
+        android:hint="Senha:"
         app:hintTextColor="@color/black"
         app:boxStrokeColor="@color/teal_200"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -86,12 +92,77 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:hint="Curso:"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/teal_200"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editCurso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Turma:"
+        android:layout_weight="1"
+        android:layout_marginStart="40dp"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/teal_200"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTurma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Período:"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="40dp"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/teal_200"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPeriodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+
     <TextView
         android:id="@+id/txt_mensagemErroTelaCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text=""
+        android:textColor="@color/red"
         android:textSize="16sp" />
 
     <Button
@@ -100,7 +171,7 @@
         android:layout_height="wrap_content"
         android:text="Cadastrar"
         android:textColor="@color/white"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="1dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:enabled="false"
@@ -116,3 +187,5 @@
 
 
 </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

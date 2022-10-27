@@ -1,19 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".Tela_contatos">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textContatos"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Em Construção"
+        android:layout_centerHorizontal="true"
+        android:text="Contatos"
         android:textColor="@color/black"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:layout_marginTop="200dp" />
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-</LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerContatos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textContatos" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btAdicionarContatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/bt_add" />
+
+</RelativeLayout>

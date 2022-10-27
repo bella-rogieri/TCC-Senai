@@ -58,11 +58,12 @@ public class TelaLogado extends AppCompatActivity {
         int itemID = item.getItemId();
 
         if (itemID == R.id.perfil) {
-
+            Intent intent = new Intent(TelaLogado.this, PerfilUsuario.class);
+            startActivity(intent);
         }else if (itemID == R.id.exit) {
             Toast.makeText(TelaLogado.this, "Usuário Deslogado", Toast.LENGTH_SHORT).show();
             FirebaseAuth.getInstance().signOut();
-            Intent intent = new Intent(TelaLogado.this, TelaLogin.class);
+            Intent intent = new Intent(TelaLogado.this, TelaDeAcesso.class);
             startActivity(intent);
             finish();
         }
