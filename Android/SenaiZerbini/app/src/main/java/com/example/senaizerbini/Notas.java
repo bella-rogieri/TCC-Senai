@@ -1,5 +1,8 @@
 package com.example.senaizerbini;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -46,7 +49,11 @@ public class Notas {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         return FirebaseFirestore.getInstance().collection("Notas");
     }
+    static CollectionReference getCollectionReferenceForFaltas(){
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        return FirebaseFirestore.getInstance().collection("faltas").document(currentUser.getUid()).collection("Minhas_faltas");
 
+    }
     static String timestampp(Timestamp timestamp) {
        return new SimpleDateFormat("dd/MM/yyyy").format(timestamp.toDate());
     }

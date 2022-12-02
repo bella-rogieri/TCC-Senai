@@ -44,6 +44,21 @@ public class TelaLogado extends AppCompatActivity {
             }
         });
 
+        image_faltas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TelaLogado.this, TelaFaltas.class);
+                startActivity(intent);
+            }
+        });
+        image_frequencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TelaLogado.this, TelaFrequencia.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

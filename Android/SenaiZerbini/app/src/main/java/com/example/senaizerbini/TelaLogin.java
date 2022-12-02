@@ -90,7 +90,7 @@ public class TelaLogin extends AppCompatActivity {
         FirebaseUser usuarioAtual = FirebaseAuth.getInstance().getCurrentUser();
 
         if (usuarioAtual != null) {
-            IniciarTelaProdutos();
+           IniciarTelaProdutos();
         }
     }
 

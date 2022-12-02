@@ -16,6 +16,15 @@
         android:theme="@style/Theme.SenaiZerbini"
         tools:targetApi="31">
         <activity
+            android:name=".TelaFrequencia"
+            android:exported="false" />
+        <activity
+            android:name=".TelaAdicionarFaltas"
+            android:exported="false" />
+        <activity
+            android:name=".TelaFaltas"
+            android:exported="false" />
+        <activity
             android:name=".TelaAddContatos"
             android:exported="false" />
         <activity

@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
            public void run() {
                Intent intent = new Intent(MainActivity.this, TelaDeAcesso.class);
                startActivity(intent);
+               finish();
            }
        },1000);
     }

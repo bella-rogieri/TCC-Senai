@@ -18,6 +18,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -49,6 +51,7 @@ public class TelaCadastro extends AppCompatActivity {
     private EditText edit_nome, edit_senha, edit_email, edit_curso, edit_turma, edit_periodo;
     private Button bt_cadastrar,btSelecionarFoto;
     private TextView mensagemErro;
+
 
     private Uri selecionarUri;
     private  String usuarioID;

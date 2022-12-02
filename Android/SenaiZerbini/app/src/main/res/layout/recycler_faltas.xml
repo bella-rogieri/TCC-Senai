@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner"
+    android:padding="10dp"
+    android:layout_margin="7dp">
+
+    <TextView
+        android:id="@+id/recyclerDisciplina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disciplina"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/recyclerAulasPrevistas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aulas Previstas"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/recyclerprevistasCalculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pode Faltar"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/recyclerFaltas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Faltas Atual"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/recyclerAddFaltas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar faltas"
+        android:textSize="20sp" />
+
+</LinearLayout>

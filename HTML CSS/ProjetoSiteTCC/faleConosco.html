@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="faleConosco.css">
+    <title>CONTATO</title>
+    <style> 
+            body{background-color: white; 
+                background-size: 100%; 
+                background-attachment: fixed;}
+    </style>
+</head>
+<body>
+    <!-- primeira div (dentro da barra superior) -->
+    <div class = "barracima">
+            <div class="box1"><a href="telaHome.html" class="cont1">Home</a></div>
+            <div class="box1"><a href="telaSobre.html" class="cont1">Sobre</a></div>
+            <div class="box1"><a href="telaContato.html" class="cont1">Contato</a></div>
+    </div>
+    
+    <!-- div (imagem do formulário) -->
+    <div class="container"> 
+        <div class="form-image">
+            <img src="img/contato.png">
+        </div>
+        <!--div (formulário) -->
+        <div class="form">
+            <form action="https://formspree.io/f/xjvzkqpl" method="POST">
+                <div class="form-header">
+                    <div class="titulo">
+                        <h1>FALE CONOSCO</h1>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="hidden" name="acessKey" value="ab937a35-0ab0-4065-b657-9c681bca2480">
+                    <div class="input-box"> 
+                    <label for="firstname">Nome Completo</label>
+                    <input id="firstname" type="text" name="fullName" placeholder="Digite seu nome" style="width: 17em" required>
+                    </div>
+    
+                    <div class="input-box"> 
+                    <label for="number">Telefone</label>
+                    <input id="number" type="tel" name="phone" placeholder="(xx) xxxx-xxxxx" style="width: 17em" required>
+                    </div>
+
+                    <div class="input-box"> 
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="Digite seu E-mail" style="width: 42em; "required>
+                    </div>
+    
+                    <div class="input-box">
+                    <br>
+                    <label>Como podemos ajudar?</label> 
+                    <textarea id="duvida" name="message" row="7">
+                    </textarea>
+
+                    </div>
+
+                 </div>
+                     <div class="enviar-button">
+                    <button type="submit"><a>Enviar</a></button>
+                    </div>
+        </form>
+       
+    </div>
+</div>
+
+ <!-- Rodape -->
+ <div class="rodape"> 
+    <div class="copyright">
+        <br><br><br><br><br>
+        <div class="icon">
+            <a href="https://www.facebook.com/"><img src="img/iconFace.png"></a> &nbsp;
+            <a href="https://www.instagram.com/"><img src="img/iconInsta.png"></a> &nbsp;
+            <a href="https://web.whatsapp.com/"><img src="img/iconWPP.png"></a> &nbsp;
+        </div>
+        <br><br><br>
+        <h5>Copyright 2022 © Todos os direitos reservados.</h5>
+        <h5>O conteúdo do site não pode ser editado, copiado ou distribuído sem expressa autorização do grupo.</h5>
+    </div>
+    </div>
+</body>
+</html>

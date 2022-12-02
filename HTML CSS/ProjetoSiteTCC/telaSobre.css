@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    
+    
+}
+/* primeira div (dentro da barra) */
+.barracima{
+    background-color: black;
+    width: 100%;
+    height: 120px;  
+    display: flex; 
+    opacity: 100%;  
+    
+}
+.img1{
+    width: 150px;
+    height: 80px;
+    
+}
+.rodape{
+    background-color: black;
+    width: 100%;
+    height: 290px;  
+    color: black;
+    opacity: 100%;
+}
+
+.box1{
+    color: rgb(0, 0, 0);
+    width: 100px;
+    height: 40px;
+    padding-top: 50px;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: bold;
+}  
+a {
+    position: relative;
+    color: white;
+    text-decoration: none;  
+  }
+  a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+.copyright{
+    color: white;
+    text-align: center;
+    margin-top: 40%;
+}
+.icon{
+    left: 100px;
+}
+.iconPlay{
+    width: 8%;
+    height: 8%;
+}
+.sobre{
+    width: 100%;
+    height: 1000px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: iniciar 1.3s ease-out;
+    pointer-events: all; 
+}
+.boxQuemSomos{
+    height: 100px;
+    background-color: black;
+    padding: 40px 70px; 
+    border-radius: 50px;
+    width: 76%;
+    margin: 20px;
+    box-shadow: 20px 20px 50px rgba(236, 119, 119, 0.3);
+    animation: iniciar 1.1s ease-out;
+  
+}
+.boxQuemSomos:hover, .boxMotivacoes:hover, .boxObjetivo:hover, .boxPublico:hover{
+    transform: scale(1.06);
+    transition: all 0.5s;
+}
+.QuemSomos{
+    color: rgb(209, 141, 141);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: iniciar 1.3s ease-out;
+    pointer-events: all;
+}
+.QuemSomosResp{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: iniciar 1.3s ease-out;
+    pointer-events: all;
+    
+}
+.boxMotivacoes{
+    height: 150px;
+    background-color: black;
+    padding: 40px 70px; 
+    border-radius: 50px;
+    width: 76%;
+    margin: 20px;
+    box-shadow: 20px 20px 50px rgba(236, 119, 119, 0.3);
+    animation: iniciar 1.1s ease-out;
+    
+
+}
+.motivacoes{
+    color: rgb(209, 141, 141);
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: iniciar 1.3s ease-out;
+    pointer-events: all;
+}
+.motivacoesResp{
+    color: white;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: iniciar 1.3s ease-out;
+    pointer-events: all;
+}
+.boxObjetivo{
+    height: 150px;
+    background-color: black;
+    padding: 40px 70px; 
+    border-radius: 50px;
+    width: 76%;
+    margin: 20px;
+    box-shadow: 20px 20px 50px rgba(236, 119, 119, 0.3);
+    animation: iniciar 1.1s ease-out;
+}
+.objetivo{
+    color: rgb(209, 141, 141);
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: iniciar 1.3s ease-out;
+    pointer-events: all;
+}
+.objetivoResp{
+    color: white;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: iniciar 1.3s ease-out;
+    pointer-events: all;
+}
+.boxPublico{
+    height: 120px;
+    background-color: black;
+    padding: 40px 70px; 
+    border-radius: 50px;
+    width: 76%;
+    margin: 20px;
+    box-shadow: 20px 20px 50px rgba(236, 119, 119, 0.3);
+    animation: iniciar 1.1s ease-out;
+}
+.publico{
+    color: rgb(209, 141, 141);
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: iniciar 1.3s ease-out;
+    pointer-events: all;
+}
+.publicoResp{
+    color: white;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: iniciar 1.3s ease-out;
+    pointer-events: all;
+}
+.tituloSobre
+{
+    padding: 90px;
+    color: black;
+}
+.tituloSobre:hover{
+    transform: scale(1.08);
+    transition: all 0.5s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.quadrado:hover{
+    transform: scale(1.08);
+    transition: all 0.5s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.blocosSobre
+{
+    padding: 90px;
+}
+.imgBloco01
+{
+    width: 350px;
+    height: 210px;
+}
+.card01
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.75rem 1.5rem
+}
+
+.img001{
+    width: 47%;
+    height: 100%;
+    border-radius: 25px 0px 0px 25px;
+
+}
+.text001{
+   justify-content: center;
+   color: aqua;
+
+   
+}
+
+.img002{
+    width: 47%;
+    height: 100%;
+    border-radius: 25px 0px 0px 25px;
+
+}
+
+
+
+
+
+
+
+
+
+.titulopergunta{
+     color:red;
+}
+.pergunta{
+    color: black;
+}
+.titulopergunta:hover{
+    transform: scale(1.08);
+    transition: all 0.5s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pergunta:hover{
+    transform: scale(1.08);
+    transition: all 0.5s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@keyframes iniciar{
+    0%{
+        top:-20%;
+        opacity: 0%;
+        pointer-events: none;
+    }
+    100%{
+        top: 50%;
+        opacity: 100%;
+        pointer-events: all;
+
+    }
+}
+
+
+
+
+
+
+
+
+

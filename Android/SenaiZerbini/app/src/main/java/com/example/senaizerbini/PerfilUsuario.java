@@ -59,11 +59,11 @@ public class PerfilUsuario extends AppCompatActivity {
 
                 if (value != null) {
                     Glide.with(getApplicationContext()).load(value.getString("foto")).into(fotoUsuario);
-                    nomeUsuario.setText(value.getString("nome"));
-                    nomeCurso.setText(value.getString("curso"));
-                    nomeTurma.setText(value.getString("turma"));
-                    nomePeriodo.setText(value.getString("periodo"));
-                    emailUsuario.setText(email);
+                    nomeUsuario.setText("Nome: " + value.getString("nome"));
+                    nomeCurso.setText("Curso: " + value.getString("curso"));
+                    nomeTurma.setText("Turma: " + value.getString("turma"));
+                    nomePeriodo.setText("Período: " + value.getString("periodo"));
+                    emailUsuario.setText(("E-mail: ") + email);
                 }
             }
         });

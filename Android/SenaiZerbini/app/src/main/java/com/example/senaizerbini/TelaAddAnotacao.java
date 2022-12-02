@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,8 @@ public class TelaAddAnotacao extends AppCompatActivity {
     String titulo,conteudo,docId;
     boolean edicaoModo = false;
     TextView deletaNota;
+    RadioGroup radioGroup;
+    RadioButton manha, tarde, noite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +38,10 @@ public class TelaAddAnotacao extends AppCompatActivity {
         salvarBotao = findViewById(R.id.sv_notas);
         pagina_titulo = findViewById(R.id.txt_titulo);
         deletaNota = findViewById(R.id.deleteNota);
-
+        radioGroup = findViewById(R.id.radioGroup);
+        manha = findViewById(R.id.manha);
+        tarde = findViewById(R.id.tarde);
+        noite = findViewById(R.id.noite);
         titulo = getIntent().getStringExtra("titulo");
         conteudo = getIntent().getStringExtra("conteudo");
         docId = getIntent().getStringExtra("docId");
@@ -58,25 +65,50 @@ public class TelaAddAnotacao extends AppCompatActivity {
 
     public void salvarNotas(){
 
+
         String titulo = tituloEdicao.getText().toString();
         String conteudo = conteudoEdicao.getText().toString();
-        if (titulo == null || titulo.isEmpty()) {
-            tituloEdicao.setError("Preencha o título");
-            return;
-        }
-        Notas nota = new Notas();
-        nota.setTitle(titulo);
-        nota.setContent(conteudo);
-        nota.setTimestamp(Timestamp.now());
 
-        saveNoteFirebase(nota);
+        if (manha.isChecked()) {
+
+
+
+
+
+
+            if (titulo == null || titulo.isEmpty()) {
+                tituloEdicao.setError("Preencha o título");
+                return;
+            }
+
+            Notas nota = new Notas();
+            nota.setTitle(titulo);
+            nota.setContent(conteudo);
+            nota.setTimestamp(Timestamp.now());
+
+            saveNoteFirebase(nota);
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
     void saveNoteFirebase(Notas nota){
         DocumentReference documentReference;
 
-        if (edicaoModo){
-            //Atualizar a nota
-            documentReference = Notas.getCollectionReferenceforNotes().document(docId);
+      if (edicaoModo){
+          //Atualizar a nota
+           documentReference = Notas.getCollectionReferenceforNotes().document(docId);
         }else{
             //Cria uma nova nota
             documentReference = Notas.getCollectionReferenceforNotes().document();
@@ -84,17 +116,17 @@ public class TelaAddAnotacao extends AppCompatActivity {
 
 
         documentReference.set(nota).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
+           @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
                     Toast.makeText(TelaAddAnotacao.this, "Nota adicionada com sucesso", Toast.LENGTH_SHORT).show();
-                    finish();
-                }else{
-                    Toast.makeText(TelaAddAnotacao.this, "Nota não foi adicionada", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+                   finish();
+               }else{
+                   Toast.makeText(TelaAddAnotacao.this, "Nota não foi adicionada", Toast.LENGTH_SHORT).show();
+               }            }});
     }
+
+
     public void deletaNotaFirebase(){
         DocumentReference documentReference;
 
